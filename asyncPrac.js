@@ -2,7 +2,7 @@ const async = require('async');
 const axios = require('axios')
 
 const asyncFunc1 = async () => {
-  console.log("Async function 1")
+  console.log("Async function 1");
 }
 
 const asyncFunc2 = async () => {
@@ -13,7 +13,14 @@ const asyncFunc2 = async () => {
 
 (async () => {
   console.log('before start----------------------');
+
   await asyncFunc2();
+
+  await setTimeout(() => {
+    console.log("setTimeout call");
+  }, 50);
+
   await asyncFunc1();
+
   console.log('after start-----------------------');
 })();
