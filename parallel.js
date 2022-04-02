@@ -1,5 +1,5 @@
 const async = require('async');
-const axios = require('axios')
+const axios = require('axios');
 
 let variableToDisplay = "";
 
